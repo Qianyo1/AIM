@@ -124,7 +124,7 @@ oldIndex = hookmetamethod(game, "__index", function(self, Index)
 			if Target ~= nil and Target[Options.Torso] and Target:FindFirstChild("Humanoid").Health > 0 then
 				if SilentAim then
 					local ShootThis = Target[Options.Torso]
-					local Predicted_Position = ShootThis.CFrame + (ShootThis.Velocity * getgenv().Prediction + Vector3.new(0,-.5,0))
+					local Predicted_Position = ShootThis.CFrame + (ShootThis.Velocity * getgenv().Prediction + Vector3.new(0, .5 ,0))
 					return ((Index == "Hit" and Predicted_Position))
 				end
 			end
